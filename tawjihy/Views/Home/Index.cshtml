@@ -1,0 +1,170 @@
+﻿@{
+    ViewData["Title"] = "الرئيسية";
+}
+
+
+
+<!-- Hero Section
+====================================== -->
+<section id="hero" class="hero">
+
+    <!-- START REVOLUTION SLIDER 5.0 -->
+    <div class="rev_slider_wrapper">
+        <div id="slider1" class="rev_slider" data-version="5.0">
+
+            <ul>
+                <!-- slide 1 -->
+                <li data-transition="fadetobottomfadefromtop" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" style="background-color: rgba(34, 34, 34, 0.3);">
+                    <!-- MAIN IMAGE -->
+                    <img src="~/assets/images/shabiba.jpg" alt="" width="1920" height="1280">
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption ahlan"
+                         data-x="center" data-hoffset="0"
+                         data-y="center" data-voffset="-50"
+                         data-whitespace="nowrap"
+                         data-width="['auto','auto','auto','auto']"
+                         data-height="['auto','auto','auto','auto']"
+                         data-transform_idle="o:1;"
+                         data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;"
+                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                         data-mask_in="x:[100%];y:0;s:inherit;e:inherit;"
+                         data-start="1000"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-responsive_offset="on"
+                         data-fontsize="['17','17','15','15']"
+                         data-lineheight="['45','45','25','25']"
+                         data-fontweight="['600','500','600','300']"
+                         data-color="#e5e4e4">
+                        أهلاً وسهلاً<br><br><br><br>
+                    </div>
+
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption text-uppercase "
+                         data-x="center" data-hoffset="0"
+                         data-y="center" data-voffset="0"
+                         data-whitespace="nowrap"
+                         data-width="['auto','auto','auto','auto']"
+                         data-height="['auto','auto','auto','auto']"
+                         data-transform_idle="o:1;"
+                         data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                         data-start="3000"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-responsive_offset="on"
+                         data-fontsize="['55','17','15','15']"
+                         data-lineheight="['50','45','25','25']"
+                         data-fontweight="['700','500','600','300']"
+                         data-color="#ffc527">
+                        <h1 style="color:#ffc527; font-size:55px" class="ahlan  sec2">خريجين الثانوية العامة<br><br></h1>
+                    </div>
+
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption ahlan3 theerd3"
+                         data-x="center" data-hoffset="0"
+                         data-y="center" data-voffset="70"
+                         data-width="['auto','auto','auto','auto']"
+                         data-height="['auto','auto','auto','auto']"
+                         data-transform_idle="o:1;"
+                         data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"
+                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                         data-start="4000"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-responsive_offset="on"
+                         data-fontsize="['17','17','17','17']"
+                         data-lineheight="['26','26','25','25']"
+                         data-fontweight="['700','500','500','500']"
+                         data-color="#fff" style="text-align:center">
+                        <br>
+                        للحصول على البرامج و التخصصات المُقترحة
+                        <br />
+                        بناء على نتائج الثانوية العامة 2023 ومفاتيح التنسيق
+                        <br>
+                        للجامعات في قطاع غزة
+                        <br> 
+                    </div>
+                 
+                    <!-- LAYER NR. 4 -->
+                    <div class="tp-caption hidemobile"
+                         id="slide-163-layer-6"
+                         data-x="center" data-hoffset="0"
+                         data-y="center" data-voffset="160"
+                         data-whitespace="nowrap"
+                         data-width="['auto','auto','auto','auto']"
+                         data-height="['auto','auto','auto','auto']"
+                         data-transform_idle="o:1;"
+                         data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"
+                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                         data-start="5000"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-164","delay":""}]'
+                         data-basealign="slide"
+                         data-responsive_offset="on"
+                         data-responsive="off">
+                        <br> <br> <br> <br>
+                        <form action="~/Home/Search" method="post">
+                            <button class="btn btn-primary mr-sm" type="submit">فحص</button>
+                            <input required type="number" name="seatNumber" id="seatNumber" class="btn btn-primary btn-white" placeholder="ادخل رقم الجلوس المكون من 6 أو 8 خانات" />
+                        </form>
+                        @if (ViewBag.Message != null)
+                        {
+                            <div class="text-danger" dir="rtl" style="text-align:start;  font-weight:400 ">
+                                @(ViewBag.Message as string)
+                            </div>
+                        }
+
+                    </div>
+
+                    <div class="tp-caption showmobile"
+                         id="slide-163-layer-6"
+                         data-x="center" data-hoffset="0"
+                         data-y="center" data-voffset="160"
+                         data-whitespace="nowrap"
+                         data-width="['auto','auto','auto','auto']"
+                         data-height="['auto','auto','auto','auto']"
+                         data-transform_idle="o:1;"
+                         data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"
+                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                         data-start="5000"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-164","delay":""}]'
+                         data-basealign="slide"
+                         data-responsive_offset="on"
+                         data-responsive="off">
+                        <form action="~/Home/Search" method="post">
+                            <div class="container">
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input required type="number" name="seatNumber" id="seatNumber" class="btn btn-primary btn-white" placeholder="ادخل رقم الجلوس المكون من 6 أو 8 خانات" />
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="btn btn-primary mr-sm" type="submit">فحص</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                        @if (ViewBag.Message != null)
+                        {
+                            <div class="text-danger" dir="rtl" style=" margin-right: 22px;text-align:start;  font-weight:400 ">
+                                @(ViewBag.Message as string)
+                            </div>
+                        }
+                    </div>
+
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- END REVOLUTION SLIDER -->
+    </div>
+    <!-- END OF SLIDER WRAPPER -->
+</section>
+<!-- #hero end -->

@@ -1,0 +1,141 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "البحث";
+}
+@section Css{
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/datatables/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="~/css/styleTable.css">
+
+}
+@section Scripts{
+    <script src="~/assets/vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="~/assets/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="~/js/admin-datatables.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+
+
+<!-- Hero Section
+====================================== -->
+<section id="hero" class="hero" style="height: 300px;">
+
+    <!-- START REVOLUTION SLIDER 5.0 -->
+    <div class="rev_slider_wrapper">
+        <div id="slider1" class="rev_slider" data-version="5.0">
+
+            <ul>
+                <!-- slide 1 -->
+                <li data-transition="zoomout" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" style="height:300px; background-color: rgba(34, 34, 34, 0.3); display:flex;">
+                    <!-- MAIN IMAGE -->
+                    <img src="~/assets/images/shabiba.jpg" alt="" width="1920" height="300px">
+                    <!-- LAYER NR. 1 -->
+                    <div class="laptop-only">
+                    <div class="tp-caption " data-x="center" data-hoffset="-50" data-y="center" data-voffset="-50" data-whitespace="nowrap"
+                         data-width="none" data-height="none" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                         data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                         data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="500" data-splitin="none" data-splitout="none"
+                         data-responsive_offset="on" data-fontsize="['17','17','15','15']" data-lineheight="['45','45','25','25']" data-fontweight="['600','500','600','300']"
+                         data-color="#fff" style="font-family: Cairo; font-size: 30px!important;">
+                        <div id="stdInfo" style="display:flex" dir="rtl">
+                            <div class="btn btn-primary" style="color:#1c1c1c;border-radius: 10px;width: 250px;font-family: Cairo; padding-bottom:53px; font-size: 20px!important;">
+                                رقم الجلوس : <span style="color:#565656">@Model.SeatingNo</span>
+                            </div>
+                            <div class="btn btn-primary" style="color:#1c1c1c;border-radius: 10px;width: 250px;margin:0 10px 0 10px;font-family: Cairo; padding-bottom:53px; font-size: 20px!important;">
+                                الفرع : <span style="color:#565656">@Model.Branch</span>
+                            </div>
+                            <div class="btn btn-primary" style="color:#1c1c1c;border-radius: 10px;width: 250px;font-family: Cairo; padding-bottom:53px; font-size: 20px!important;">
+                                المعدل : <span style="color: #565656">@Model.Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class=" phone-only">
+                    <div class="tp-caption" data-x="center" data-y="center" data-whitespace="nowrap"
+                         data-width="none" data-height="none" data-transform_idle="o:1;"
+                         data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                         data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                         data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                         data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="500"
+                         data-splitin="none" data-splitout="none" data-responsive_offset="on"
+                         data-fontsize="['17','17','15','15']" data-lineheight="['45','45','25','25']"
+                         data-fontweight="['600','500','600','300']" data-color="#fff"
+                             style="font-family: Cairo; font-size: 30px!important;margin-top: 60%; padding-top: 60%;">
+
+                        <div id="stdInfo" style="display: flex; flex-direction: column; align-items: center;" dir="rtl">
+                            <div class="btn btn-primary" style="color: #1c1c1c; border-radius: 10px; width: 250px; font-family: Cairo; font-size: 20px!important;">
+                                رقم الجلوس : <span style="color: #565656;">@Model.SeatingNo</span>
+                            </div>
+                            <div class="btn btn-primary" style="color: #1c1c1c; border-radius: 10px; width: 250px; margin-top: 10px; font-family: Cairo; font-size: 20px!important;">
+                                الفرع : <span style="color: #565656;">@Model.Branch</span>
+                            </div>
+                            <div class="btn btn-primary" style="color: #1c1c1c; border-radius: 10px; width: 250px; margin-top: 10px; font-family: Cairo; font-size: 20px!important;">
+                                المعدل : <span style="color: #565656;">@Model.Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- END REVOLUTION SLIDER -->
+    </div>
+    <!-- END OF SLIDER WRAPPER -->
+</section>
+<!-- #hero end -->
+<!-- Shortcode #2
+============================================= -->
+<section id="shortcode-2" style="background-color:#e1e1e1  !important; padding:20px" class="shortcode-2 about-home text-center-xs text-center-sm">
+    <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered sortable" id="dataTable" width="100%" style="background-color:#1f1f1f" cellspacing="0" dir="rtl">
+                        <thead>
+                            <tr style="font-family: Cairo;background-color:#f3b200;color:#1f1f1f; ">
+                                <th style="text-align:center">التخصص</th>
+                                <th style="text-align:center">المؤسسة</th>
+                                <th style="text-align:center">الكلية</th>
+                                <th style="text-align:center">الدرجة العلمية</th>
+                                <th style="text-align:center">مفتاح تنسيق المؤسسة</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr style="font-family: Cairo;background-color:#f3b200;color:#1f1f1f; ">
+                                <th style="text-align:center">التخصص</th>
+                                <th style="text-align:center">المؤسسة</th>
+                                <th style="text-align:center">الكلية</th>
+                                <th style="text-align:center">الدرجة العلمية</th>
+                                <th style="text-align:center">مفتاح تنسيق المؤسسة</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @if (ViewBag.Majors != null)
+                            {
+
+                                @foreach (var major in ViewBag.Majors)
+                                {
+                                    <tr style="font-family: Cairo;color:#fff; ">
+
+                                        <td style="text-align:center;color:#f3b200;font-weight:600 ">@major.Name @major.Gender</td>
+                                        <td style="text-align:center">@major.University</td>
+                                        <td style="text-align:center">@major.College</td>
+                                        <td style="text-align:center">@major.Degree</td>
+                                        <td style="text-align:center">@major.Universitykey</td>
+
+                                    </tr>
+                                }
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- .container end -->
+</section>

@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - tawjihy</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/tawjihy.styles.css" asp-append-version="true" />
+
+
+    <link href="~/assets/images/favicon/apple-icon.png" rel="icon">
+
+    <!-- Fonts
+    ============================================= -->
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="~/assets/css/external.css" rel="stylesheet">
+    <!-- Extrnal CSS -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-rtl.css" rel="stylesheet">
+    <!-- Boostrap Core CSS -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/assets/css/style-rtl.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/css/navigation.css">
+
+</head>
+<body>
+ @*    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="Admin" asp-controller="Home" asp-action="Index">tawjihy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header> *@
+
+<header id="navbar-spy" class="full-header header-3 transparent-header" style="background-color:black; display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+    <!-- Logo Section -->
+    <div class="navbar-header">
+        <a class="logo" href="~/">
+            <img src="~/assets/images/logo/shabiba1.svg" alt="shabiba logo">
+        </a>
+    </div>
+        <partial name="_LoginPartial" />
+
+
+</header>
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- #hero end -->
+    <footer id="footer" class="footer-1">
+        <!-- Social bar
+        ============================================= -->
+        <div class="widget-social">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mb-30-xs mb-30-sm">
+                        <div class="widget-social-info pull-right text-capitalize pull-none-xs mb-15-xs">
+                            <p class="mb-0">تابعني عبر وسائل التواصل الاجتماعي</p>
+                        </div>
+                        <div class="widget-social-icon pull-left text-right pull-none-xs">
+                            <a href="https://www.facebook.com/mohammed.h.jmian" target="_blank">
+                                <i class="fa fa-facebook"></i><i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/mohammed.h.jmian/" target="_blank">
+                                <i class="fa fa-instagram"></i><i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/972594563069" target="_blank">
+                                <i class="fa fa-whatsapp"></i><i class="fa fa-whatsapp"></i>
+                            </a>
+                            <a href="https://t.me/Mohammed_H_Jmian" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
+                                    <style>
+                                        svg {
+                                            fill: #9e9e9e
+                                        }
+                                    </style>
+                                    <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyrights
+        ============================================= -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 copyrights text-center">
+                    <p class="text-capitalize">© 2023 - 2024 Mohammed.H.Jmian . All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

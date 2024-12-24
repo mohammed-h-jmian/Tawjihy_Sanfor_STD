@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<form action="~/Admin/Home/UploadStudents" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file"> ملف الإكسل للطلاب:</label>
+        <input required type="file" id="file" name="file" class="form-control-file" accept=".xlsx, .xls">
+    </div>
+    <button type="submit" class="btn btn-primary">رفع</button>
+</form>
+عدد الطلاب = ( @ViewBag.StudentCount )
+<a href="~/Admin/Home/DeleteAllStudents" onclick="return confirm('هل أنت متأكد من حذف جميع الطلاب?');">حذف كل الطلاب</a>
+
+<form action="~/Admin/Home/UploadMajorings" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file"> ملف الإكسل للتخصصات:</label>
+        <input required type="file" id="file" name="file" class="form-control-file" accept=".xlsx, .xls">
+    </div>
+    <button type="submit" class="btn btn-primary">رفع</button>
+</form>
+عدد التخصصات = ( @ViewBag.MajoringCount )
+<a href="~/Admin/Home/DeleteAllMajorings" onclick="return confirm('هل أنت متأكد من حذف جميع التخصصات?');">حذف كل التخصصات</a>
+
+<form action="~/Admin/Home/UploadUniversity" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file"> ملف الإكسل للجامعات والمؤسسات:</label>
+        <input required type="file" id="file" name="file" class="form-control-file" accept=".xlsx, .xls">
+    </div>
+    <button type="submit" class="btn btn-primary">رفع</button>
+</form>
+عدد الجامعات و المؤسسات = ( @ViewBag.UniversityCount )
+<a href="~/Admin/Home/DeleteAllUniversities" onclick="return confirm('هل أنت متأكد من حذف جميع الجامعات والتخصصات?');">حذف كل الجامعات والمؤسسات</a>
+
+
+<h3>  عدد الزوار : @ViewBag.VisitorsCount </h3>
+<a class="btn btn-primary" href="~/Admin/Home/DownloadExcelFile">تنزيل ملف الزوار </a>
+<br />
+
+@* <a href="~/Admin/Base/ClearCache">Clear Cache</a> *@
+<br />
+@*<a href="~/Admin/Base/ShowCache">Show Cache</a>*@
+@*
+      <br />
+        <br />
+        <br />
+        <br />
+        <br />
+<a href="~/Admin/Testing/SendNumbersForTesting">Send Numbers For Testing</a>
+*@

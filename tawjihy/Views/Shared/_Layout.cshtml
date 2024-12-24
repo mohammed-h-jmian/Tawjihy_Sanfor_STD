@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <!-- Document Meta
+    ============================================= -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--IE Compatibility Meta-->
+    <meta name="author" content="wplly" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="construction html5 template">
+    <link href="~/assets/images/favicon/apple-icon.png" rel="icon">
+
+    <!-- Fonts
+    ============================================= -->
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="~/assets/css/external.css" rel="stylesheet">
+    <!-- Extrnal CSS -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap-rtl.css" rel="stylesheet">
+    <!-- Boostrap Core CSS -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/assets/css/style-rtl.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/revolution/css/navigation.css">
+
+    @await RenderSectionAsync("Css", required: false)
+
+    <title>'طالب سنفور' | @ViewData["Title"]</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="spinner">
+            <div class="bounce1">
+            </div>
+            <div class="bounce2">
+            </div>
+            <div class="bounce3">
+            </div>
+        </div>
+    </div>
+    <header id="navbar-spy" class="full-header header-3 transparent-header">
+        <nav id="primary-menu" class="navbar navbar-fixed-top style-1">
+            <div class="row">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="logo" href="~/">
+                            @*<img src="~/assets/images/logo/logo-light-Recovered.png" alt="shabiba logo">*@
+                            <img src="~/assets/images/logo/shabiba1.svg" alt="shabiba logo">
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="has-dropdown @(ViewData["Title"] == "الرئيسية" ? "active" : "")">
+                                <a href="~/">الرئيسية</a>
+                            </li>
+                            <!-- li end -->
+                            <li class="has-dropdown @(ViewData["Title"] == "المؤسسات" ? "active" : "")">
+                                <a href="~/Home/Universities">المؤسسات</a>
+                            </li>
+                            <!-- li end -->
+                            <li class="has-dropdown">
+                                <a href="https://www.mohe.pna.ps/scholarships" target="_blank">المنح</a>
+                            </li>
+                            <!-- li end -->
+                            <li class="has-dropdown @(ViewData["Title"] == "عنا" ? "active" : "")">
+                                <a href="~/Home/About">عنا</a>
+                            </li>
+                            <!-- li end -->
+                        </ul>
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+        </nav>
+    </header>
+
+
+    @RenderBody()
+
+
+    <!-- #hero end -->
+    <footer id="footer" class="footer-1">
+        <!-- Social bar
+        ============================================= -->
+        <div class="widget-social">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mb-30-xs mb-30-sm">
+                        <div class="widget-social-info pull-right text-capitalize pull-none-xs mb-15-xs">
+                            <p class="mb-0">تابعني عبر وسائل التواصل الاجتماعي</p>
+                        </div>
+                        <div class="widget-social-icon pull-left text-right pull-none-xs">
+                            <a href="https://www.facebook.com/mohammed.h.jmian" target="_blank">
+                                <i class="fa fa-facebook"></i><i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/mohammed.h.jmian/" target="_blank">
+                                <i class="fa fa-instagram"></i><i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/972594563069" target="_blank">
+                                <i class="fa fa-whatsapp"></i><i class="fa fa-whatsapp"></i>
+                            </a>
+                            <a href="https://t.me/Mohammed_H_Jmian" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
+                                    <style>
+                                        svg {
+                                            fill: #9e9e9e
+                                        }
+                                    </style>
+                                    <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyrights
+        ============================================= -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 copyrights text-center">
+                    <p class="text-capitalize">© 2023 - 2024 Mohammed.H.Jmian . All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="~/assets/js/jquery-2.1.1.min.js"></script>
+    <script src="~/assets/js/plugins.js?v=1.0.0"></script>
+    <script src="~/assets/js/functions.js?v=1.2.0"></script>
+    <!-- RS5.0 Core JS Files -->
+    <script type="text/javascript" src="~/assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="~/assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+
+    <script type="text/javascript" src="~/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="~/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="~/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="~/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="~/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="~/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="~/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="~/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery("#slider1").revolution({
+                sliderType: "standard",
+                sliderLayout: "auto",
+                delay: 6000,
+                disableProgressBar: "on",
+                spinner: "off",
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    onHoverStop: "off",
+                    arrows: {
+                        style: "arrow",
+                        enable: true,
+                        hide_onmobile: true,
+                        hide_onleave: false,
+                        tmp: '',
+                        left: {
+                            h_align: "left",
+                            v_align: "bottom",
+                            h_offset: 110,
+                            v_offset: 40
+                        },
+                        right: {
+                            h_align: "left",
+                            v_align: "bottom",
+                            h_offset: 150,
+                            v_offset: 40
+                        }
+                    }
+                },
+                gridwidth: 1230,
+                gridheight: 800,
+
+            });
+        });
+    </script>
+</body>
+</html>

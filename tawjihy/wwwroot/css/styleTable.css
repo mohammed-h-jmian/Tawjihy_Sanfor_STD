@@ -1,0 +1,98 @@
+﻿.tp-mask-wrap {
+    top: -100px!important;
+}
+
+@media (max-width: 768px) {
+    .tp-mask-wrap {
+        top: 0px !important;
+    }
+}
+.paginate_button {
+    background-color: #2f2f2f;
+    color: #fff;
+    border: 2px solid #2f2f2f;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    padding: 10px;
+    margin: 2px;
+    line-height: 49px;
+    width: 170px;
+    height: 51px;
+    text-align: center;
+    border-radius:10px;
+}
+    .paginate_button:hover,
+    .paginate_button:focus,
+    .paginate_button:active {
+        background-color: #ffc527;
+        color: #2f2f2f;
+        border: 2px solid #ffc527
+    }
+
+.dataTables_info {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 23px !important;
+    color: #2f2f2f !important;
+    text-align: end;
+}
+.dataTables_wrapper div.dataTables_length select {
+    background-color: #1f1f1f !important;
+    border-color: #fff !important;
+    color: #f3b200 !important;
+    padding: 5px;
+    border-radius: 10px;
+}
+.dataTables_wrapper div.dataTables_filter input {
+    background-color: #1f1f1f !important;
+    border-color: #fff !important;
+    color: #f3b200 !important;
+    padding: 5px;
+    border-radius: 10px;
+}
+.dataTable_length {
+    background-color: #fff;
+    border-color: #fff;
+    color: #2f2f2f;
+}
+    .dataTable_length:active {
+        background-color: #2f2f2f;
+        border-color: #2f2f2f;
+        color: #fff;
+    }
+.dataTables_length{
+
+}
+
+.dataTables_filter input {
+    background-color: #fff;
+    border-color: #fff;
+    color: #2f2f2f;
+}
+
+/* Add CSS to hide the first div on mobile (phone) */
+@media (max-width: 767px) {
+    .laptop-only {
+        display: none;
+    }
+
+    .phone-only {
+        display: block;
+    }
+}
+
+/* Add CSS to hide the second div on laptops */
+@media (min-width: 768px) {
+    .laptop-only {
+        display: block;
+    }
+
+    .phone-only {
+        display: none;
+    }
+}
